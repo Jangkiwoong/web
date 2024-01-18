@@ -31,7 +31,18 @@
         주로 button이랑 같이 사용됨 <br>
         input 태그를 통해 test, dropdown list, radio, checkbox타입으로 전송될 수 있음. <br>
         hidden타입을 통해 UI없이 데이터를 전송가능<br>
-        label태그와 for타입을 이용하여 무언가에 이름을 나타내고 싶을때 사용<br>
+        label태그와 for타입을 이용하여 무언가에 이름을 나타내고 싶을때 사용(좀더 넓은 영역을 포함시킬 때 사용)<br>
+        method <br>
+        데이터를 전송할 때 url로 전송하는 방식을 get방식 (QueryString) <br>
+        데이터를 전송할 때 HTTP의 메시지를 Body에 담아서 전송하는 방식을 post방식<br>
+        참고 : GET과 달리 전송해야 될 데이터를 HTTP 메시지의 Body에 담아서 전송합니다.<br> 
+        그리고 그 Body의 타입은 요청 헤더의 Content-Type에 요청 데이터의 타입을 표시 따라 결정됩니다. (POST로 요청을 보낼 때는 해야 합니다.)<br>
+        HTTP 메시지의 Body는 길이의 제한 없이 데이터를 전송할 수 있습니다.<br>
+         그래서 POST 요청은 GET과 달리 대용량 데이터를 전송할 수 있는 이유도 이 때문입니다.<br>
+         <br>
+         form방식을 이용한 file전송 : <br>
+         intput태그의 file타입을 지정해주면 된다. 그리고 enctype을 multipart/form-data로 지정해준다.<br>
+         
     </p>
     <p>참고 : <a href="https://www.youtube.com/playlist?list=PLuHgQVnccGMDUzDDCKW-pCZQY-MMCX5yB">생활코딩 HTML 수업</a></p>
 </body>
