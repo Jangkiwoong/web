@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <rect x="10" y="10" height="100" width="100"
+        style="stroke:#006600; stroke-width:10px; fill: #00cc00"/>
+    <circle cx="100" cy="40" r="35" style="stroke:#006600; fill:#00cc00"/>
+
+</svg>
