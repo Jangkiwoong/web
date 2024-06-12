@@ -1,6 +1,16 @@
 .App {
   text-align: center;
 }
+.wkdrldnd {
+  display: flex;
+  background: black;
+  width: 100%;
+  color: white;
+  padding-left: 20px;
+}
+.blogpage {
+  background-color: gray;
+}
 
 .App-logo {
   height: 40vmin;
