@@ -2,12 +2,7 @@ const h1 =  document.querySelector(".hello h1");
 const h1s = document.querySelectorAll(".hello h1")
 
 handleTitleClick = () => {
-    const clickedClass = "clicked";
-    if (h1.classList.contains(clickedClass)) {
-        h1.classList.remove(clickedClass);
-    } else {
-        h1.classList.add(clickedClass);
-    }
+    h1.classList.toggle("clicked")
     console.log(h1.classList)
 }
 
