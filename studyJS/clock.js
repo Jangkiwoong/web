@@ -8,4 +8,4 @@ getClock = () => {
    clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
 getClock();
-const ticktock= setInterval(getClock, 1000);   
+const ticktock= setInterval(getClock, 1000);
