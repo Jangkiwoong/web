@@ -6,22 +6,35 @@
 </body>
     <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
         const root = document.getElementById("root");
-        const span = React.createElement(
-            "h3",
-            {
-                onMouseEnter: () => console.log('mouse enter')
-            },
-            "WoW!, Hello I'am span!!");
-        const btn = React.createElement(
-            "button",
-            {onClick: () => console.log("aaa")},
-            "click me")
+        const title =
+        <h3 id="title" onMouseEnter={() => console.log('mouse enter')}>
+            WoW!, Hello I'am span!!
+        </h3>
+        // const title = React.createElement(
+        //     "h3",
+        //     {
+        //         onMouseEnter: () => console.log('mouse enter')
+        //     },
+        //     "WoW!, Hello I'am span!!");
+        const btn =
+        <button id="button" 
+         style={{
+            backgroundColor: "tomato",
+         }}
+         onClick={() => console.log("i'm click")}>
+            click me
+        </button>
+        // const btn = React.createElement(
+        //     "button",
+        //     {onClick: () => console.log("aaa")},
+        //     "click me")
         const container = React.createElement(
             "div",
             {id : "counte"},
-            [span, btn])
+            [title, btn])
         ReactDOM.render(container, root)
     </script>
 </html>
