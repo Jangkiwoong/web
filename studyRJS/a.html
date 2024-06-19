@@ -27,11 +27,14 @@
                     </button>
             );
         }
-        const container = 
-        <div id="container">
-            <Title></Title>
-            <Btn></Btn>
-        </div>
+        const container = () => {
+            return (
+                <div id="container">
+                    <Title></Title>
+                    <Btn></Btn>
+                </div>
+            );
+        }
         ReactDOM.render(container, root)
     </script>
 </html>
