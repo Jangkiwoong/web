@@ -9,43 +9,14 @@
     <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
         const root = document.getElementById("root");
-        const Title = () => {
+        const Container = () => {
             return (
-                <h3 id="title" onMouseEnter={() => console.log('mouse enter')}>
-                    WoW!, Hello I'am span!!
-                </h3>
+                <div id="Container">
+                    <h3>Total clicks: 0</h3>
+                    <button>Click me</button>
+                </div>
             );
         }
-        // const title = React.createElement(
-        //     "h3",
-        //     {
-        //         onMouseEnter: () => console.log('mouse enter')
-        //     },
-        //     "WoW!, Hello I'am span!!");
-        const Btn = () => {
-            return (
-                    <button id="button" 
-                    style={{
-                        backgroundColor: "tomato",
-                    }}
-                    onClick={() => console.log("i'm click")}>
-                        click me
-                    </button>
-            );
-        }
-        // const btn = React.createElement(
-        //     "button",
-        //     {onClick: () => console.log("aaa")},
-        //     "click me")
-        const container = 
-        <div id="container">
-            <Title></Title>
-            <Btn></Btn>
-        </div>
-        // const container = React.createElement(
-        //     "div",
-        //     {id : "container"},
-        //     [title, btn])
-        ReactDOM.render(container, root)
+        ReactDOM.render(<Container />, root)
     </script>
 </html>
