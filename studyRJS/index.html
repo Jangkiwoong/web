@@ -9,19 +9,18 @@
     <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
         const root = document.getElementById("root");
-        let counter = 10;
-        const countUp = () => {
-            counter += 1;
-            ReactDOM.render(<Container />, root)
-        }
-        const Container = () => {
+        const App = () => {
+            const [count, setcount] = React.useState(0);
+            const countUp = () => {
+                setcount(count + 1);
+            };
             return (
                 <div id="Container"> 
-                    <h3>Total clicks: {counter}</h3>
+                    <h3>Total clicks: {count}</h3>
                     <button onClick={countUp}>Click me</button>
                 </div>
             );
         }
-        ReactDOM.render(<Container />, root)
+        ReactDOM.render(<App/>, root);
     </script>
 </html>
