@@ -1,53 +1,74 @@
 <!DOCTYPE html>
+
 <head>
 </head>
+
 <body>
     <div id="root"></div>
 </body>
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel">
-        const root = document.getElementById("root");
-        const App = () => {
-            return(
-                <Counter/>
-            );
-        }
-        const Counter = () => {
-            const [count, setcount] = React.useState(0);
-            return(
-                <div id="Container"> 
-                    <h3>Total clicks: {count}</h3>
-                    <button onClick={() => {setcount((temp) => temp + 1)}}>Click me</button>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    const root = document.getElementById("root");
+    const Counter = () => {
+        const [count, setcount] = React.useState(0);
+        return (
+            <div id="container">
+                <h3>Total clicks: {count}</h3>
+                <button onClick={() => { setcount((temp) => temp + 1) }}>Click me</button>
+            </div>
+        );
+    }
+    const ConverterTime = () => {
+        const [time, setTime] = React.useState(0);
+        const [flipped, setFlipped] = React.useState(false);
+        return (
+            <div>
+                <h1 className="hi">Super Converter for Time</h1>
+                <div>
+                    <label htmlFor="minutes">Minutes</label>
+                    <input
+                        value={flipped ? time * 60 : time}
+                        id="minutes"
+                        placeholder="Minutes"
+                        type="number"
+                        disabled={flipped}
+                        onChange={(event) => { setTime(event.target.value) }} />
                 </div>
-            );
-        }
-        // const Converter = () => {
-        //     return(
-
-        //     );
-        // }
-        ReactDOM.render(<App/>, root);
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        //  리엑트      : html태그 생성(컨포넌트)
+                <div>
+                    <label htmlFor="hours">Hours</label>
+                    <input
+                        value={flipped ? time : Math.round(time / 60)}
+                        id="hours"
+                        placeholder="Hours"
+                        type="number"
+                        disabled={!flipped}
+                        onChange={(event) => { setTime(event.target.value) }} />
+                </div>
+                <button onClick={() => { setTime(0) }}>Reset</button>
+                <button onClick={() => { setFlipped((current) => !current), setTime(0) }}>Flip</button>
+            </div>
+        );
+    }
+    const App = () => {
+        return (
+            <div>
+                <Counter />
+                <ConverterTime />
+            </div>
+        );
+    }
+    ReactDOM.render(<App />, root);
+</script>
+<script>
+    //  리엑트      : html태그 생성(컨포넌트)
     //  리엑트DOM   : 생성된 컨포넌트 랜더링
     //  JSX       : 리액트에서 컨포넌트를 좀 더 직관적으로 생성하도록 도움(태그문법)
     //  useState  : 리랜더링, 컨포넌트 내에 지역변수
 
     // 장점 : HTML요소를 생성하거나 찾을 필요 x
     //       이벤트리스너를 더해줄 필요도 UI를 리랜더링 해줄 필요도 없음
-    </script>
+</script>
+
 </html>
