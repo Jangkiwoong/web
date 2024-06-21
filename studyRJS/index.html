@@ -104,11 +104,11 @@
             >{props.text}</button>
         );
     } 
-    // const MemorizedBtn = React.memo(Btn);
-    Btn.propTypes = {
-        text: PropTypes.string,
-        fontSize: PropTypes.number,
-    };
+    const MemorizedBtn = React.memo(Btn);
+    // Btn.propTypes = {
+    //     text: PropTypes.string,
+    //     fontSize: PropTypes.number,
+    // };
     const App = () => {
         const [index, setIndex] = React.useState("xx");
         const [value, setValue] = React.useState("Save Changes");
@@ -132,8 +132,8 @@
                 <hr />
                 <hr />
                 <div>
-                    <Btn text={value} big ={true} onClick={ () => {setValue("Revert Changes")} } />    
-                    <Btn text={12} big ={false} />    
+                    <MemorizedBtn text={value} big ={true} onClick={ () => {setValue("Revert Changes")} } />    
+                    <MemorizedBtn text="Continue" big ={false} />    
                 </div>   
             </div>
         );
