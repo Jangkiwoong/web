@@ -99,11 +99,13 @@
                     borderRadius: 10,
                     fontSize: props.big ? 20 : 16
                 }}
+                onClick={props.onClick}
             >{props.text}</button>
         );
     } 
     const App = () => {
         const [index, setIndex] = React.useState("xx");
+        const [value, setValue] = React.useState("Save Changes");
         return (
             <div>
                 <h1>HAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA</h1>
@@ -124,7 +126,7 @@
                 <hr />
                 <hr />
                 <div>
-                    <Btn text="Save Changes" big ={true} />    
+                    <Btn text={value} big ={true} onClick={ () => {setValue("Revert Changes")} } />    
                     <Btn text="Continue" big ={false} />    
                 </div>   
             </div>
