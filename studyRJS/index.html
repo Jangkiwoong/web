@@ -10,11 +10,11 @@
 <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
-    const root = document.getElementById("root");
     const Counter = () => {
         const [count, setcount] = React.useState(0);
         return (
             <div id="container">
+                <h1>Super CounteNumber</h1>
                 <h3>Total clicks: {count}</h3>
                 <button onClick={() => { setcount((temp) => temp + 1) }}>Click me</button>
             </div>
@@ -82,24 +82,55 @@
             </div>
         );
     }
+    const Pelese = () => { 
+        return (
+            <h1>"Plese select your units"</h1>
+        );
+    }
+    const Btn = (props) => {
+        console.log(props)
+        return (
+            <button 
+                style={{
+                    backgroundColor: "tomato",
+                    color: "white",
+                    padding: "10px 20px",
+                    border: 0,
+                    borderRadius: 10,
+                    fontSize: props.big ? 20 : 16
+                }}
+            >{props.text}</button>
+        );
+    } 
     const App = () => {
-        const [index, setIndex] = React.useState("0");
+        const [index, setIndex] = React.useState("xx");
         return (
             <div>
+                <h1>HAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA</h1>
                 <div>
                     <select value={index} onChange={ (event) => { setIndex(event.target.value) } }>
+                        <option value= "xx">Select your units</option>
                         <option value= "0">CountNumber</option>
                         <option value= "1">Minutes & Hours</option>
                         <option value= "2">Km & Miles</option>
                     </select>
                     <hr />
+                    {index === "xx" ? <Pelese /> : null}
                     {index === "0" ? <Counter /> : null}
                     {index === "1" ? <ConverterTime /> : null}
                     {index === "2" ? <ConverterMeter /> : null}
-                </div>    
+                </div> 
+                <hr />
+                <hr />
+                <hr />
+                <div>
+                    <Btn text="Save Changes" big ={true} />    
+                    <Btn text="Continue" big ={false} />    
+                </div>   
             </div>
         );
     }
+    const root = document.getElementById("root");
     ReactDOM.render(<App />, root);
 </script>
 <script>
