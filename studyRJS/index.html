@@ -88,8 +88,10 @@
             <h1>"Plese select your units"</h1>
         );
     }
-    const Btn = (props) => {
-        console.log(props)
+    const Btn = ({text, big, onClick}) => {
+        console.log(text);
+        console.log(big);
+        console.log(onClick);
         return (
             <button 
                 style={{
@@ -98,10 +100,10 @@
                     padding: "10px 20px",
                     border: 0,
                     borderRadius: 10,
-                    fontSize: props.big ? 20 : 16
+                    fontSize: big ? 20 : 16
                 }}
-                onClick={props.onClick}
-            >{props.text}</button>
+                onClick={onClick}
+            >{text}</button>
         );
     } 
     const MemorizedBtn = React.memo(Btn);
