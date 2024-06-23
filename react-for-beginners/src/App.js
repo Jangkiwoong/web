@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import Practice from "./component/practice/Practice.js";
-import TodoList from './component/todoList/TodoList.js';
-import styles from "./App.module.css"
+import TodoList from "./component/todoList/TodoList.js";
+import styles from "./App.module.css";
 
 function App() {
   return (
@@ -12,5 +12,5 @@ function App() {
     </div>
   );
 }
- 
+
 export default App;
