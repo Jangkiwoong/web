@@ -3,8 +3,8 @@ import {useEffect} from "react";
 const Clean = ({temp, onClick}) => {
     const Hello = () => {
         useEffect(() => {
-            console.log("created :)");
-            return () => console.log("distroyed :(")
+            console.log("hi :)");
+            return () => console.log("bye :(")
         }, []);
         return (
             <h1>Hello</h1>
