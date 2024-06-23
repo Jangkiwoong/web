@@ -2,6 +2,7 @@ import React from "react";
 import Practice from "./component/practice/Practice.js";
 import TodoList from "./component/todoList/TodoList.js";
 import styles from "./App.module.css";
+import Coin from "./component/Coin/Coin.js";
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
       <Practice />
       <hr />
       <TodoList />
+      <hr />
+      <hr />
+      <Coin />
     </div>
   );
 }

@@ -26,9 +26,7 @@ const TodoList = () => {
       </form>  
       <hr />
       <ul>
-        {toDos.map((item, index, array) => (
-          <li key={index}>{item}</li>
-        ))}
+        {toDos.map((item, index, array) => {return (<li key={index}>{item}</li>);} ) }
       </ul>
     </div>
   );
