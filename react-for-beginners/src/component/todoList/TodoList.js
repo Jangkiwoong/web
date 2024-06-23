@@ -3,7 +3,6 @@ import { useState } from "react";
 const TodoList = () => {
   const [toDo, setTodo] = useState("");
   const [toDos, setTodos] = useState([]);
-  console.log(toDos);
   return (
     <div>
       <h1>My To days List /{toDos.length}</h1>
@@ -24,10 +23,10 @@ const TodoList = () => {
           placeholder="Write your to do..."
         />
         <button>Add To Do</button>
-      </form>
+      </form>  
       <hr />
       <ul>
-        {toDos.map((item, index) => (
+        {toDos.map((item, index, array) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
