@@ -24,7 +24,14 @@ const Movie = () => {
       ) : (
         <div>
           {movie.map((movie) => (
-            <div key={movie.id}>{movie.title} </div>
+            <div key={movie.id}>
+              <h2>{movie.title}</h2>
+              <img src={movie.medium_cover_image} alt={movie.title} />
+              <p>{movie.summary}</p>
+              <ul>
+                {movie.genres.map((genres, index) => <li key={index}>{genres}</li>)}
+              </ul>
+            </div>
           ))}
         </div>
       )}
