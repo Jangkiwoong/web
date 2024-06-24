@@ -10,7 +10,7 @@ const MovieDetaile = ({movie, loading}) => {
                 {movie.map((movie) => (
                     <div key={movie.id}>
                     <h2>
-                        <Link to="/movie">{movie.title}</Link>
+                        <Link to={`/movie/${movie.id}`} >{movie.title}</Link>
                     </h2>
                     <img src={movie.medium_cover_image} alt={movie.title} />
                     <p>{movie.summary}</p>

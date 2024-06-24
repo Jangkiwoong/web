@@ -16,7 +16,6 @@ const Movie = () => {
     };
     getMovie();
   }, []);
-  console.log(movie);
   return (
     <div>
       <MovieDetaile movie={movie} loading={loading} />
