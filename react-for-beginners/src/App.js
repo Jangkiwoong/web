@@ -1,20 +1,22 @@
 import React from "react";
-import Practice from "./component/practice/Practice.js";
-import TodoList from "./component/todoList/TodoList.js";
-import Coin from "./component/Coin/Coin.js";
-import Movie from "./component/movie/Movie.js"
+import Home from "./routes/Home"
+import Detail from "./routes/Detail"
 import styles from "./App.module.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className={styles.title}>
-      <Practice />
-      <hr />
-      <TodoList />
-      <hr />
-      <Coin />
-      <hr />
-      <Movie />
+      <Router>
+        <Routes>
+          <Route path="/movie" element={<Detail />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
