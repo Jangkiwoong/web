@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/https//Jangkiwoong.github.io/web.git%20/static/css/main.f09da543.css",
-    "main.js": "/https//Jangkiwoong.github.io/web.git%20/static/js/main.daef0d5f.js",
-    "index.html": "/https//Jangkiwoong.github.io/web.git%20/index.html",
-    "main.f09da543.css.map": "/https//Jangkiwoong.github.io/web.git%20/static/css/main.f09da543.css.map",
-    "main.daef0d5f.js.map": "/https//Jangkiwoong.github.io/web.git%20/static/js/main.daef0d5f.js.map"
+    "main.css": "/https//Jangkiwoong.github.io/web.git/static/css/main.f09da543.css",
+    "main.js": "/https//Jangkiwoong.github.io/web.git/static/js/main.daef0d5f.js",
+    "index.html": "/https//Jangkiwoong.github.io/web.git/index.html",
+    "main.f09da543.css.map": "/https//Jangkiwoong.github.io/web.git/static/css/main.f09da543.css.map",
+    "main.daef0d5f.js.map": "/https//Jangkiwoong.github.io/web.git/static/js/main.daef0d5f.js.map"
   },
   "entrypoints": [
     "static/css/main.f09da543.css",
