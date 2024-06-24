@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import { Link } from "react-router-dom";
 
 const MovieDetaile = ({movie, loading}) => {
     return(
@@ -8,7 +9,9 @@ const MovieDetaile = ({movie, loading}) => {
                 <div>
                 {movie.map((movie) => (
                     <div key={movie.id}>
-                    <h2>{movie.title}</h2>
+                    <h2>
+                        <Link to="/movie">{movie.title}</Link>
+                    </h2>
                     <img src={movie.medium_cover_image} alt={movie.title} />
                     <p>{movie.summary}</p>
                     <ul>
