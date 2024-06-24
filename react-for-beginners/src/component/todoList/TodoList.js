@@ -13,7 +13,7 @@ const TodoList = () => {
             return;
           }
           setTodo("");
-          setTodos((prov) => [toDo, ...toDos]);
+          setTodos(() => [toDo, ...toDos]);
         }}
       >
         <input
@@ -24,9 +24,8 @@ const TodoList = () => {
         />
         <button>Add To Do</button>
       </form>  
-      <hr />
       <ul>
-        {toDos.map((item, index, array) => {return (<li key={index}>{item}</li>);} ) }
+        {toDos.map((item, index) => {return (<li key={index}>{item}</li>);} ) }
       </ul>
     </div>
   );

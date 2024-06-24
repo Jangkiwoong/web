@@ -1,8 +1,9 @@
 import React from "react";
 import Practice from "./component/practice/Practice.js";
 import TodoList from "./component/todoList/TodoList.js";
-import styles from "./App.module.css";
 import Coin from "./component/Coin/Coin.js";
+import Movie from "./component/movie/Movie.js"
+import styles from "./App.module.css";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       <hr />
       <TodoList />
       <hr />
-      <hr />
       <Coin />
+      <hr />
+      <Movie />
     </div>
   );
 }
