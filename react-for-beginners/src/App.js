@@ -13,8 +13,8 @@ function App() {
     <div className={styles.title}>
       <Router>
         <Routes>
-          <Route path={"/movie/:id"} element={<Detail />} />
-          Route path={`${process.env.PUBLIC_URL}/`} element={< Home />}
+          <Route path={`${process.env.PUBLIC_URL}/movie/:id`} element={<Detail />} />
+          <Route path={`${process.env.PUBLIC_URL}/`} element={< Home />} />
         </Routes>
       </Router>
     </div>

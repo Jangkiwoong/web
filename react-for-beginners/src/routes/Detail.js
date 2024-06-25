@@ -25,7 +25,7 @@ const Detail = () => {
       ) : (
         <div>
           <h1>
-            <Link to={"/"}>Home</Link>
+            <Link to={`${process.env.PUBLIC_URL}/`}>Home</Link>
           </h1>
           <hr />
           <h3>{movie.title}</h3>
