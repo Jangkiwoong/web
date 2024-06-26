@@ -2,11 +2,7 @@ import React from "react";
 import Home from "./routes/Home"
 import Detail from "./routes/Detail"
 import styles from "./App.module.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

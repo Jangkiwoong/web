@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// import styled from "styled-components";
+// const styledDetail = styled.Deatil`
+//   background-color:purple;
+// `;
+
 const Detail = () => {
   const [movie, setMovie] = useState([]);
   const [loading, setLoading] = useState(true);

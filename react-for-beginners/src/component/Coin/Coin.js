@@ -13,13 +13,6 @@ const Coin = () => {
         setLoading(false);
       });
   }, []);
-  // useEffect(() => {
-  //   console.log("coins :" + getCoin);
-  // }, [getCoin]);
-  // console.log(getCoin);
-  // useEffect(() => {
-  //   console.log("myMoney :" + myMoney);
-  // }, [myMoney]);
   return (
     <div>
       <div>
